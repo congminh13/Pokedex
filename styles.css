@@ -1,70 +1,83 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
     width: 100%;
     height: 100%;
     background: url("./background.png") no-repeat center center fixed;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .container {
-    height: 100vh;
-    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 10px;
 }
 
 input {
-    padding-left: 10px;
-    width: 500px;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
     height: 50px;
     text-decoration: none;
-    color: rgb(212, 212, 212);
-    font-size: 25px;
+    font-size: 20px;
     border-radius: 10px;
+    color: rgb(212, 212, 212);
     background-color: rgba(0, 0, 0, 0.72);
 }
 
 .display {
-    margin-top: 50px;
-    width: 700px;
-    height: 450px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
     background-color: rgba(0, 0, 0, 0.72);
     border-radius: 15px; 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .upsight {
-    padding-inline: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80%;
-    width: 60%;
+    width: 100%;
 }
 
 #poke-pic {
-    padding-top: 20%;
     width: 100%;
-    height: 100%;
+    padding: 30px;
+    height: auto;
 }
 
 .insight {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 10px;
-    font-size: 20px;
-    height: 100%;
-    width: 40%;
+    font-size: 16px;
     color: rgb(212, 212, 212);
     padding-top: 20px;
 }
 
 .stat {
     padding-top: 5px;
+}
+
+@media (min-width: 768px) {
+    input {
+        font-size: 25px;
+    }
+
+    .display {
+        flex-direction: row;
+    }
+
+    .insight {
+        font-size: 20px;
+    }
 }
