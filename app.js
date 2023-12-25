@@ -3,6 +3,15 @@ var input = document.getElementById('poke-find');
 input.addEventListener('keydown', function (event) {
     if (event.keyCode === 13) {  
         let name = input.value;
+        if (name.toLowerCase() === 'phikachu') {
+            let stat = document.createElement("div");
+            const rev = document.querySelector(".insight");
+            rev.innerHTML = ''; 
+            stat.innerHTML = 'anh phi map thu lu';
+            const pokeImg = document.querySelector("#poke-pic");
+            pokeImg.setAttribute("src", "https://zpsocial-f53-org.zadn.vn/d9228efa5f32be6ce723.jpg");
+            rev.appendChild(stat);
+        }
         fetch(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`)
             .then(response => response.json())
             .then((data) => {
