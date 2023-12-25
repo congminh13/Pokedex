@@ -3,7 +3,7 @@ var input = document.getElementById('poke-find');
 input.addEventListener('keydown', function (event) {
     if (event.keyCode === 13) {  
         let name = input.value;
-        fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+        fetch(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`)
             .then(response => response.json())
             .then((data) => {
                 console.log(data.name);
